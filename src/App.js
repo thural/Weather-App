@@ -58,6 +58,10 @@ const useStyles = createUseStyles({
       gridTemplateRows: '2fr 5fr 3fr',
       margin: '0',
       padding: '0',
+      fontFamily: `-apple-system, BlinkMacSystemFont,
+       'Segoe UI', 'Roboto', 'Oxygen', 
+       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+        'Helvetica Neue', sans-serif`,
       '& .top-panel': {
          display: 'flex',
          flexFlow: 'row nowrap',
