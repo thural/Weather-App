@@ -16,7 +16,7 @@ const useStyles = createUseStyles({
 
 })
 
-const Searchbar = () => {
+const AppHeader = () => {
   const classes = useStyles();
   return (
     <div className={classes.appheader}>
@@ -31,4 +31,4 @@ const Searchbar = () => {
   );
 };
 
-export default Searchbar;
+export default AppHeader;

@@ -16,12 +16,12 @@ const useStyles = createUseStyles({
 
 })
 
-const Searchbar = () => {
+const Searchbar = ({handleSearch}) => {
    const classes = useStyles();
    return (
-      <div className={classes.searchbar}>
-        <input type='text' placeholder='search places' required></input>
-      </div>
+      <form className={classes.searchbar} onSubmit={(e) => handleSearch(e)}>
+        <input type='input' name='search' placeholder='search places' required></input>
+      </form>
    );
 };
 

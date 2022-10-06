@@ -20,11 +20,11 @@ const useStyles = createUseStyles({
 
 })
 
-const WeatherInfo = () => {
+const WeatherInfo = ({weather}) => {
   const classes = useStyles();
   return (
     <div className={classes.details}>
-      <DetailsItem />
+      <DetailsItem weather={weather}/>
     </div>
   );
 };

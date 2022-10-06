@@ -10,7 +10,16 @@ const useStyles = createUseStyles({
     display: 'flex',
     flexFlow: 'column nowrap',
     padding: '0',
-    gap: '0.5rem',
+    gap: '1rem',
+
+    '& .day': {
+      fontSize: '1.5rem',
+
+    },
+    '& .temp-high': {
+      fontSize: '2rem',
+      
+    }
 
   },
 
@@ -19,7 +28,7 @@ const useStyles = createUseStyles({
 const ForecastItem = () => {
   const classes = useStyles();
   return (
-    <div className={classes.detailItem}>
+    <div className={classes.forecastItem}>
       <div className="day">Friday</div>
       <div className="temp">
         <div className="temp-high">25 °C</div>
@@ -28,7 +37,7 @@ const ForecastItem = () => {
       <div className="forecast-icon">
       <Icon path={mdiWeatherCloudy}
           title="weather-cloudy"
-          size={1}
+          size={2}
           color="white" />
       </div>
     </div>

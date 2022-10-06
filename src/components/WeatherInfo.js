@@ -14,22 +14,29 @@ const useStyles = createUseStyles({
     flexFlow: 'column nowrap',
     color: 'white',
 
-    '& .bottom-panel': {
-      backgroundColor: 'antiquewhite'
+    '& .info-desc': {
+      fontSize: '2rem'
+    },
+    '& .info-city': {
+      fontSize: '1.5rem'
+    },
+    '& .info-time': {
+      fontSize: '2.5rem',
+      fontWeight: '600',
     }
   },
 
 })
 
-const WeatherInfo = () => {
+const WeatherInfo = ({weather}) => {
   const classes = useStyles();
   return (
     <div className={classes.info}>
-      <div className="info-desc">Few Clouds</div>
-      <div className="info-city">Baku</div>
+      <div className="info-desc">{weather.weather[0]['main']}</div>
+      <div className="info-city">{weather.name}</div>
       <div className="info-date">Thursday, 6th Oct '22</div>
-      <div className="info-time">23 °C</div>
-      <div className="info-unit">Dsiplay in C</div>
+      <div className="info-time">{weather.main['temp']} °C</div>
+      <div className="info-unit">Display in C</div>
       <div className="info-icon">
         <Icon path={mdiWeatherCloudy}
           title="weather-cloudy"

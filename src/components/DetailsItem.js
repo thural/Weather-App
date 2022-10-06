@@ -12,23 +12,29 @@ const useStyles = createUseStyles({
     padding: '0',
     gap: '0.5rem',
 
+    '& .detail-label': {
+      fontSize: '1rem'
+    },
+    '& .detail-value': {
+      fontSize: '2rem'
+    },
   },
 
 })
 
-const DetailsItem = () => {
+const DetailsItem = ({weather}) => {
   const classes = useStyles();
   return (
     <div className={classes.detailItem}>
       <div className="detail-icon">
       <Icon path={mdiWeatherCloudy}
           title="weather-cloudy"
-          size={1}
+          size={ 1.5 }
           color="white" />
       </div>
       <div className="detail-info">
         <div className="detail-label">Feels Like</div>
-        <div className="detail-value">23 °C</div>
+        <div className="detail-value">{weather.main.feels_like} °C</div>
       </div>
     </div>
   );
